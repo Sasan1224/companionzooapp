@@ -1,4 +1,6 @@
+
 class Pregunta{
+  @override
   int? id;
   String pregunta;
   List<String> optionList;

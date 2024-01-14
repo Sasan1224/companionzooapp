@@ -1,3 +1,4 @@
+import 'package:app_zoo/screens/info_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginScreen(),  // Establece la pantalla de Login como la primera pantalla
+      home: AnimalInfo(),  
     );
   }
 }

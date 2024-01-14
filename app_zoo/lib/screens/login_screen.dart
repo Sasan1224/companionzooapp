@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Image.asset('assets/bread.png'), // Reemplaza con tu imagen
+                child: Image.asset('assets/applogo.png'),
               ),
             ),
           ),

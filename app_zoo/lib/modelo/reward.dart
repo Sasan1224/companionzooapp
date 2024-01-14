@@ -1,15 +1,21 @@
-class Reward{
-  int points;
-  String imagePath;
-  bool _claim = false; 
 
-  Reward({required this.points,required this.imagePath});
+class Reward{
+  
+  @override
+  final int? id;
+  final int points;
+  final String imagePath;
+  bool claimed; 
+
+  Reward({this.id, required this.points,required this.imagePath, this.claimed=false});
 
   void claimReward(){
-    _claim = true;
+    claimed = true;
   }
 
   bool isAvailable(){
-    return _claim == false;
+    return claimed == false;
   }
+
+  
 }

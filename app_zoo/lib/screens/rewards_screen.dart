@@ -12,12 +12,7 @@ class RewardsScreen extends StatefulWidget {
 class _RewardsScreenState extends State<RewardsScreen> {
   int _puntos = rewardProvider.getPuntaje;
 
-  final List<Reward> _recompensas = [
-    Reward(imagePath: "assets/R1.png", points: 500),
-    Reward(imagePath: "assets/R1.png", points: 200),
-    Reward(imagePath: "assets/R1.png", points: 1000),
-    Reward(imagePath: "assets/R1.png", points: 2000),
-  ];
+  final List<Reward> _recompensas = rewardProvider.getRecompensas;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +48,7 @@ class _RewardsScreenState extends State<RewardsScreen> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue, // Color de fondo del botón
                   ),
-                  onPressed: () => _validateReward(recompensa: recompensa),
+                  onPressed: () => _validateReward(recompensa: recompensa, context: context),
                   child: Text(
                     'Reclamar: ${recompensa.points}',
                     style: const TextStyle(color: Colors.white),
@@ -67,16 +62,20 @@ class _RewardsScreenState extends State<RewardsScreen> {
     );
   }
 
-  void _validateReward({required Reward recompensa}) {
+  void _validateReward({required Reward recompensa, required BuildContext context}) {
     if (_puntos >= recompensa.points && recompensa.isAvailable()) {
-      print("Reclamada");
       recompensa.claimReward();
       rewardProvider.subPoints(recompensa.points);
       setState(() {
         _puntos = rewardProvider.getPuntaje;
       });
+      ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Recompensa reclamada satisfactoriamente')),
+                    );
     } else {
-      print("No se puede reclamar la recompensa");
+      ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('No se pudo reclamar la recompensa.')),
+                    );
     }
   }
 }

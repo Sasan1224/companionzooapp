@@ -1,5 +1,13 @@
+import 'package:app_zoo/modelo/reward.dart';
+
 class _RewardProvider{
   int puntos;
+  final List<Reward> _recompensas = [
+    Reward(imagePath: "assets/R1.png", points: 200),
+    Reward(imagePath: "assets/R1.png", points: 500),
+    Reward(imagePath: "assets/R1.png", points: 1000),
+    Reward(imagePath: "assets/R1.png", points: 2000),
+  ];
 
   _RewardProvider({required this.puntos});
 
@@ -11,6 +19,8 @@ class _RewardProvider{
 
   int get getPuntaje => puntos;
 
+  List<Reward> get getRecompensas => _recompensas;
+  
   void addPoints(int cantidad){
     if(cantidad>0){
       puntos+=cantidad;

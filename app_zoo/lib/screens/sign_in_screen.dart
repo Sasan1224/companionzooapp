@@ -1,3 +1,4 @@
+import 'package:app_zoo/providers/user_provider.dart';
 import 'package:app_zoo/screens/main_app_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -61,7 +62,13 @@ class SignInScreen extends StatelessWidget {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Procesando datos')),
                     );
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainAppScreen()));
+                    if(userProvider.selectUserFromCredentials(usuario: _usernameController.text, password: _passwordController.text)!=null){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainAppScreen()));
+                    }else{
+                      ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('¡Credenciales invalidas!')),
+                    );
+                    }
                   }
                 },
               ),
