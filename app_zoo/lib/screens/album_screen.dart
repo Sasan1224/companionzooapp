@@ -1,18 +1,31 @@
-/*import 'package:app_zoo/widgets/text_view.dart';
+import 'package:app_zoo/widgets/image_with_text.dart';
 import 'package:flutter/material.dart';
 
-class AlbumScreen extends StatelessWidget {
-  const AlbumScreen({super.key});
+class EventScreen extends StatelessWidget {
+  const EventScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Álbum")),
-      body: const Center(child: Text("Álbum")),
+      appBar: AppBar(title: const Text("Eventos")),
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            ImageWithText(imagePath: "assets/R1.png", text: "Evento: Charla sobre animales."),
+            ImageWithText(imagePath: "assets/R1.png", text: "Evento: Charla sobre animales."),
+            ImageWithText(imagePath: "assets/R1.png", text: "Evento: Charla sobre animales."),
+            ImageWithText(imagePath: "assets/R1.png", text: "Evento: Charla sobre animales."),
+          ],
+        ),
+      ),
     );
   }
-}*/
+}
 
+
+
+
+/*
 import 'dart:io';
 
 import 'package:app_zoo/widgets/base_modal.dart';
@@ -166,4 +179,4 @@ class _AlbumScreenState extends State<AlbumScreen> {
       photoPaths = files.map((file) => file.path).toList();
     }
   }
-}
+}*/

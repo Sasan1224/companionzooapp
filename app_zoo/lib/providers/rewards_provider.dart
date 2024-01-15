@@ -4,9 +4,9 @@ class _RewardProvider{
   int puntos;
   final List<Reward> _recompensas = [
     Reward(imagePath: "assets/R1.png", points: 200),
-    Reward(imagePath: "assets/R1.png", points: 500),
-    Reward(imagePath: "assets/R1.png", points: 1000),
-    Reward(imagePath: "assets/R1.png", points: 2000),
+    Reward(imagePath: "assets/R2.png", points: 500),
+    Reward(imagePath: "assets/R3.png", points: 1000),
+    Reward(imagePath: "assets/R4.png", points: 2000),
   ];
 
   _RewardProvider({required this.puntos});

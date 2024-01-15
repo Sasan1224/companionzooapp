@@ -1,5 +1,6 @@
 import 'package:app_zoo/modelo/reward.dart';
 import 'package:app_zoo/providers/rewards_provider.dart';
+import 'package:app_zoo/widgets/image_placeholder.dart';
 import 'package:flutter/material.dart';
 
 class RewardsScreen extends StatefulWidget {
@@ -80,43 +81,4 @@ class _RewardsScreenState extends State<RewardsScreen> {
   }
 }
 
-class ImagePlaceholder extends StatelessWidget {
-  final String imagePath;
 
-  const ImagePlaceholder({super.key, required this.imagePath});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-          height: 200, // Define una altura fija para la imagen
-          child: Center(child: Image.asset(imagePath))),
-    );
-  }
-}
-
-class ButtonPlaceholder extends StatelessWidget {
-  final int necessaryPoints;
-
-  const ButtonPlaceholder({super.key, required this.necessaryPoints});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.blue, // Color de fondo del botón
-        ),
-        onPressed: () {
-          print("Reclamada");
-        },
-        child: Text(
-          'Reclamar: $necessaryPoints',
-          style: const TextStyle(color: Colors.white),
-        ),
-      ),
-    );
-  }
-}

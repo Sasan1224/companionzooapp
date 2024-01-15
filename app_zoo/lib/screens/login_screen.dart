@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Image.asset('assets/applogo.png'),
+                child: Image.asset('assets/logoapp.png'), // Reemplaza con tu imagen
               ),
             ),
           ),
@@ -21,7 +21,7 @@ class LoginScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey, // Color de fondo
+                backgroundColor: Color.fromARGB(255, 31, 104, 221), // Color de fondo
                 foregroundColor: Colors.white, // Color del texto
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey, // Color de fondo
+                backgroundColor: const Color.fromARGB(255, 31, 104, 221), // Color de fondo
                 foregroundColor: Colors.white, // Color del texto
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0), // Bordes redondeados

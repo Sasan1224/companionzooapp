@@ -1,7 +1,6 @@
 import 'package:app_zoo/screens/album_screen.dart';
 import 'package:app_zoo/screens/camara_screen.dart';
-import 'package:app_zoo/screens/historias_sceen.dart';
-import 'package:app_zoo/screens/qr_scanner_screen.dart';
+import 'package:app_zoo/screens/historias_screen.dart';
 import 'package:app_zoo/screens/trivia_start_screen.dart';
 import 'package:app_zoo/widgets/clickleable_container_widget.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -60,7 +59,7 @@ class MainAppScreen extends StatelessWidget {
           color: Colors.green,
           icon: Icons.photo_camera,
           text: "Cámara",
-          onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const QrScreen()));},
+          onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CamaraScreen()));},
 
         )),
         Expanded(
@@ -74,8 +73,8 @@ class MainAppScreen extends StatelessWidget {
             child: MyClickableContainer(
           color: Colors.blue,
           icon: Icons.photo_album,
-          text: "Álbum",
-          onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AlbumScreen()));},
+          text: "Eventos",
+          onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const EventScreen()));},
         )),
       ]),
     );
