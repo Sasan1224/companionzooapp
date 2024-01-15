@@ -21,9 +21,9 @@ class _AnimalInfoProvider {
     AnimalInfo(
       identificadorQR: "catfish",
       imageList: [
-        'assets/eel1.png',
-        'assets/eel2.png',
-        'assets/eel3.png',
+        'assets/b1.jpg',
+        'assets/b2.jpg',
+        'assets/b3.jpg',
       ],
       nombre: "Bagre",
       descripcionAnimal:
@@ -38,9 +38,9 @@ class _AnimalInfoProvider {
     AnimalInfo(
       identificadorQR: "hatchetfish",
       imageList: [
-        'assets/eel1.png',
-        'assets/eel2.png',
-        'assets/eel3.png',
+        'assets/ht1.jpg',
+        'assets/ht2.jpg',
+        'assets/ht3.jpg',
       ],
       nombre: "Pez Hacha",
       descripcionAnimal:
@@ -53,28 +53,11 @@ class _AnimalInfoProvider {
           "Su dieta incluye principalmente insectos y otros organismos que se encuentran en la superficie del agua. Algunas especies también pueden alimentarse de pequeños peces.",
       ),
       AnimalInfo(
-        identificadorQR: "bettaFish",
-        imageList: [
-        'assets/eel1.png',
-        'assets/eel2.png',
-        'assets/eel3.png',
-      ],
-        nombre: "Pez Betta",
-        descripcionAnimal:
-            "El pez Betta, también conocido como luchador de siam, es conocido por su atractiva coloración y aletas espléndidas. Son peces de agua dulce populares en acuarios.",
-        descripcionHabitat:
-            "Los bettas se encuentran comúnmente en aguas lentas como arrozales, charcos y estanques en el sudeste asiático.",
-        descripcionComportamiento:
-            "Los bettas son territoriales y a menudo deben mantenerse solos en acuarios. Los machos pueden mostrar un comportamiento agresivo hacia otros bettas.",
-        descripcionAlimentacion:
-            "Su dieta incluye alimentos en escamas o pellets específicos para peces Betta. También pueden comer larvas de mosquito y otros alimentos vivos.",
-      ),
-      AnimalInfo(
         identificadorQR: "tangFish",
         imageList: [
-        'assets/eel1.png',
-        'assets/eel2.png',
-        'assets/eel3.png',
+        'assets/yt1.jpg',
+        'assets/yt2.jpg',
+        'assets/yt3.jpg',
       ],
         nombre: "Pez Cirujano",
         descripcionAnimal:
@@ -89,9 +72,9 @@ class _AnimalInfoProvider {
       AnimalInfo(
         identificadorQR: "neonTetra",
         imageList: [
-        'assets/eel1.png',
-        'assets/eel2.png',
-        'assets/eel3.png',
+        'assets/nt1.jpg',
+        'assets/nt2.jpg',
+        'assets/nt3.jpg',
       ],
         nombre: "Tetra Neón",
         descripcionAnimal:
@@ -102,41 +85,7 @@ class _AnimalInfoProvider {
             "Son peces pacíficos y deben mantenerse en grupos para sentirse seguros. A menudo nadan en grupos y son compatibles con otros peces de acuario de tamaño similar.",
         descripcionAlimentacion:
             "La dieta del tetra neón incluye alimentos en escamas, alimentos congelados y alimentos vivos pequeños. Son omnívoros.",
-      ),
-      AnimalInfo(
-        identificadorQR: "discusFish",
-        imageList: [
-        'assets/eel1.png',
-        'assets/eel2.png',
-        'assets/eel3.png',
-      ],
-        nombre: "Pez Disco",
-        descripcionAnimal:
-            "El pez disco es conocido por su forma circular y coloración vibrante. Es apreciado en acuarios por su elegancia, pero requiere cuidados específicos.",
-        descripcionHabitat:
-            "Los peces disco son nativos de las cuencas de los ríos de América del Sur, como el río Amazonas.",
-        descripcionComportamiento:
-            "Son peces sociales que prefieren vivir en grupos. Requieren condiciones de agua específicas y son sensibles a la calidad del agua.",
-        descripcionAlimentacion:
-            "La dieta del pez disco incluye alimentos vivos, alimentos congelados y alimentos en escamas de alta calidad. Requieren una dieta variada.",
-      ),
-      AnimalInfo(
-        identificadorQR: "guppyFish",
-        imageList: [
-        'assets/eel1.png',
-        'assets/eel2.png',
-        'assets/eel3.png',
-      ],
-        nombre: "Guppy",
-        descripcionAnimal:
-            "El guppy es un pequeño pez tropical conocido por su reproducción prolífica y colores brillantes. Es una opción popular para principiantes en acuarismo.",
-        descripcionHabitat:
-            "Los guppys son originarios de América del Sur, pero también se encuentran en otras partes del mundo debido a su popularidad en acuarios.",
-        descripcionComportamiento:
-            "Son peces activos y pacíficos que pueden adaptarse a una variedad de entornos acuáticos. Los machos tienen aletas caudales vistosas.",
-        descripcionAlimentacion:
-            "La dieta del guppy incluye alimentos en escamas y alimentos congelados. Son omnívoros y aceptan una amplia gama de alimentos.",
-      ),
+      ),    
   ];
 
   AnimalInfo? getAnimalWithQR(String identificadorQR){

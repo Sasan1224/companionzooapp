@@ -23,29 +23,29 @@ class _TriviaScreenState extends State<TriviaScreen> {
           "Océano Atlántico",
           "Agua salada de mar",
           "Rios de agua dulce",
-          "Estuarlos de agua salobre"
+          "Estuarios de agua salobre"
         ],
-        correctIndex: 2, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMidzW31Fd4q6eOVh41aSdc5saoJPMxUWB0csobiNbk6XHDuJ9AaWwEqKrCFE-dSv8TjI&usqp=CAU"),
+        correctIndex: 3, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMidzW31Fd4q6eOVh41aSdc5saoJPMxUWB0csobiNbk6XHDuJ9AaWwEqKrCFE-dSv8TjI&usqp=CAU"),
     Pregunta(
         id: 0,
-        pregunta: "Pregunta 2",
+        pregunta: "¿El Tetra Neón es un pez cuya dieta es completamente carnivora o herbívora?",
         optionList: [
-          "Océano Atlántico",
-          "Agua salada de mar",
-          "Rios de agua dulce",
-          "Estuarlos de agua salobre"
+          "Carnívora",
+          "Omnívora",
+          "Hebívora",
+          "Insectívora"
         ],
-        correctIndex: 2, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMidzW31Fd4q6eOVh41aSdc5saoJPMxUWB0csobiNbk6XHDuJ9AaWwEqKrCFE-dSv8TjI&usqp=CAU"),
+        correctIndex: 1, imageUrl: "https://laguiadelacuario.es/wp-content/uploads/2020/05/acuariotetras_pda.jpg"),
     Pregunta(
         id: 0,
-        pregunta: "Pregunta 3",
+        pregunta: "¿Cuál de los siguientes peces suele ser un poco agresivo y territorial a la hora de cuidar su habitat en los arrecifes?",
         optionList: [
-          "Océano Atlántico",
-          "Agua salada de mar",
-          "Rios de agua dulce",
-          "Estuarlos de agua salobre"
+          "Guppy",
+          "Pez Payaso",
+          "Cirujano amarillo",
+          "Bagre"
         ],
-        correctIndex: 2, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMidzW31Fd4q6eOVh41aSdc5saoJPMxUWB0csobiNbk6XHDuJ9AaWwEqKrCFE-dSv8TjI&usqp=CAU")
+        correctIndex: 2, imageUrl: "https://cdn0.bioenciclopedia.com/es/posts/1/7/1/pez_payaso_171_orig.jpg")
   ];
 
   @override
