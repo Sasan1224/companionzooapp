@@ -11,10 +11,9 @@ class EventScreen extends StatelessWidget {
       body: const SingleChildScrollView(
         child: Column(
           children: [
-            ImageWithText(imagePath: "assets/R1.png", text: "Evento: Charla sobre animales."),
-            ImageWithText(imagePath: "assets/R1.png", text: "Evento: Charla sobre animales."),
-            ImageWithText(imagePath: "assets/R1.png", text: "Evento: Charla sobre animales."),
-            ImageWithText(imagePath: "assets/R1.png", text: "Evento: Charla sobre animales."),
+            ImageWithText(imagePath: "assets/zoocali.jpg", text: "Evento: Charla sobre animales."),
+            ImageWithText(imagePath: "assets/bear.jpg", text: "Evento: Alimentación del Oso de anteojos."),
+            ImageWithText(imagePath: "assets/tigers.jpeg", text: "Evento: Charla e inauguración nuevo recinto tigres."),
           ],
         ),
       ),

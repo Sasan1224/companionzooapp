@@ -1,4 +1,4 @@
-import 'package:app_zoo/screens/album_screen.dart';
+import 'package:app_zoo/screens/event_screen.dart';
 import 'package:app_zoo/screens/camara_screen.dart';
 import 'package:app_zoo/screens/historias_screen.dart';
 import 'package:app_zoo/screens/trivia_start_screen.dart';
