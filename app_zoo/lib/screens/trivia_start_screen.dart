@@ -16,7 +16,7 @@ class TriviaStartScreen extends StatelessWidget {
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Image.asset('assets/bread.png'), // Reemplaza con tu imagen
+                child: Image.asset('assets/trivianimal.png'), // Reemplaza con tu imagen
               ),
             ),
           ),
@@ -24,7 +24,7 @@ class TriviaStartScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey, // Color de fondo
+                backgroundColor: Color.fromARGB(255, 27, 87, 227), // Color de fondo
                 foregroundColor: Colors.white, // Color del texto
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
@@ -43,7 +43,7 @@ class TriviaStartScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey, // Color de fondo
+                backgroundColor: const Color.fromARGB(255, 27, 87, 227), // Color de fondo
                 foregroundColor: Colors.white, // Color del texto
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0), // Bordes redondeados
