@@ -9,9 +9,13 @@ import 'package:flutter/material.dart';
 class MainAppScreen extends StatelessWidget {
   MainAppScreen({super.key});
   final List<String> imageList = [
+    'assets/pub1.JPG',
     'assets/1Z.JPG',
     'assets/2Z.JPG',
     'assets/3Z.JPG',
+    'assets/pub2.JPG',
+    'assets/pub3.JPG',
+    'assets/pub4.JPG',
   ];
 
   @override
