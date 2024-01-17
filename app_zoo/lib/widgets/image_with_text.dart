@@ -18,8 +18,8 @@ class ImageWithText extends StatelessWidget {
             height: 200,
             child: Center(child: Image.asset(imagePath))),
           Positioned(
-            bottom: 16.0, // Ajusta la posición vertical según tus necesidades
-            left: 30.0, // Ajusta la posición horizontal según tus necesidades
+            bottom: 16.0, 
+            left: 30.0, 
             child: Text(
               text,
               style: const TextStyle(
