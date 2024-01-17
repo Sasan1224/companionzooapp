@@ -5,7 +5,10 @@ import 'package:app_zoo/widgets/image_with_button.dart';
 import 'package:flutter/material.dart';
 
 class HistoriasScreen extends StatelessWidget {
-  const HistoriasScreen({super.key});
+
+  final historias = historiaProvider.historias;
+
+  HistoriasScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,19 +17,11 @@ class HistoriasScreen extends StatelessWidget {
       body: SingleChildScrollView(
       child: Column(
         children: [
-          ImageWithButton(imagePath: "assets/R1.png",buttonText: "Ver Historia", onPressed: (){
-            Historia?  historia = historiaProvider.getHistoriaFromID(0);
-            if(historia != null){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => HistoriasDetailScreen(historia: historia)));
-            }
-          },),
-
-          ImageWithButton(imagePath: "assets/R1.png",buttonText: "Ver Historia", onPressed: (){
-            Historia?  historia = historiaProvider.getHistoriaFromID(1);
-            if(historia != null){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => HistoriasDetailScreen(historia: historia)));
-            }
-          },)
+          for(Historia historia in historias) ...[
+            ImageWithButton(imagePath: historia.imagenDePortada,buttonText: "Ver Historia", onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => HistoriasDetailScreen(historia: historia)));},
+            ),
+          ],
         ],
       ),
       ),

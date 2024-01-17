@@ -2,31 +2,26 @@ import 'package:app_zoo/modelo/historia.dart';
 
 class _HistoriaProvider{
 
-  List<Historia> historias = [
+  final List<Historia> _historias = [
     Historia(
-      id: 0, 
+      imagenDePortada: "assets/zoocali.jpg",
       imageList: [
-        "assets/historias/H (1).jpg",
-        "assets/historias/H (2).jpg",
-        "assets/historias/H (3).jpg",
-        ]
-      ),
-    Historia(
-      id: 1, 
-      imageList: [
-        "assets/historias/H (4).jpg",
-        "assets/historias/H (5).jpg",
-        "assets/historias/H (6).jpg",
+        "assets/historias/1.png",
+        "assets/historias/2.png",
+        "assets/historias/3.png",
+        "assets/historias/4.png",
+        "assets/historias/5.png",
         ]
       ),
   ];
 
+  List<Historia> get historias => _historias;
+
   
-  Historia? getHistoriaFromID(int id){
-    for(Historia historia in historias){
-      if (historia.id == id){
-        return historia;
-      }
+  Historia? getHistoriaFromIndex(int index){
+    
+    if (index >= 0 && index <historias.length){
+      return historias[index];
     }
     return null;
   }

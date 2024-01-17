@@ -36,7 +36,7 @@ class AnimalInfoScreen extends StatelessWidget {
                 return Builder(
                   builder: (BuildContext context) {
                     return ClipRRect(
-                      borderRadius: BorderRadius.circular(30), // Bordes redondeados
+                      borderRadius: BorderRadius.circular(30), 
                       child: Container(
                         width: MediaQuery.of(context).size.width,
                         margin: const EdgeInsets.symmetric(horizontal: 1),
@@ -50,7 +50,7 @@ class AnimalInfoScreen extends StatelessWidget {
                 );
               }).toList(),
             ),
-            // Título en el rectángulo azul
+            // Título 
             Container(
               padding: const EdgeInsets.all(16.0),
               width: double.infinity,
@@ -64,7 +64,7 @@ class AnimalInfoScreen extends StatelessWidget {
                 textAlign: TextAlign.left,
               ),
             ),
-            // Espacio de texto en el rectángulo rojo
+            // Espacio de texto 
             Container(
               padding: const EdgeInsets.all(16.0),
               width: double.infinity,
@@ -90,7 +90,7 @@ class AnimalInfoScreen extends StatelessWidget {
                 textAlign: TextAlign.left,
               ),
             ),
-            // Espacio de texto en el rectángulo rojo
+            // Espacio de texto 
             Container(
               padding: const EdgeInsets.all(16.0),
               width: double.infinity,
@@ -116,7 +116,7 @@ class AnimalInfoScreen extends StatelessWidget {
                 textAlign: TextAlign.left,
               ),
             ),
-            // Espacio de texto en el rectángulo rojo
+            // Espacio de texto 
             Container(
               padding: const EdgeInsets.all(16.0),
               width: double.infinity,
@@ -142,7 +142,7 @@ class AnimalInfoScreen extends StatelessWidget {
                 textAlign: TextAlign.left,
               ),
             ),
-            // Espacio de texto en el rectángulo rojo
+            // Espacio de texto 
             Container(
               padding: const EdgeInsets.all(16.0),
               width: double.infinity,

@@ -1,5 +1,6 @@
 import 'package:app_zoo/modelo/user_model.dart';
 import 'package:app_zoo/providers/user_provider.dart';
+import 'package:app_zoo/screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatelessWidget {
@@ -74,10 +75,7 @@ class RegistrationScreen extends StatelessWidget {
                 child: const Text('Registrarse'),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    // Aquí implementarías la lógica de registro
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Registrando usuario')),
-                    );
+                    
                     if(userProvider.exist(mail: _emailController.text)){
                       ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Usuario Registrado, por favor inicie sesión.')),
@@ -87,7 +85,9 @@ class RegistrationScreen extends StatelessWidget {
                       userProvider.insert(user);
                       ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Registro satisfactorio')),
-                    );
+                      );
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) =>  SignInScreen()));
+
                     }
                     
                   }

@@ -22,7 +22,7 @@ class MainAppScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Carrusel de Imágenes'),
+        title: const Text('Inicio'),
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         CarouselSlider(
@@ -56,7 +56,7 @@ class MainAppScreen extends StatelessWidget {
           color: Colors.amber,
           icon: Icons.menu_book,
           text: "Historias",
-          onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HistoriasScreen()));},
+          onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => HistoriasScreen()));},
         )),
         Expanded(
             child: MyClickableContainer(
@@ -78,7 +78,7 @@ class MainAppScreen extends StatelessWidget {
           color: Colors.blue,
           icon: Icons.photo_album,
           text: "Eventos",
-          onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const EventScreen()));},
+          onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (context) => EventScreen()));},
         )),
       ]),
     );

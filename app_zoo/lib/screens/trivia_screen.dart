@@ -16,7 +16,6 @@ class _TriviaScreenState extends State<TriviaScreen> {
   int puntosObtenidos = 0;
   List<Pregunta> questions = [
     Pregunta(
-        id: 0,
         pregunta:
             "¿En qué tipo de hábitat acuático se encuentra comúnmente la anguila?",
         optionList: [
@@ -27,7 +26,6 @@ class _TriviaScreenState extends State<TriviaScreen> {
         ],
         correctIndex: 3, imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMidzW31Fd4q6eOVh41aSdc5saoJPMxUWB0csobiNbk6XHDuJ9AaWwEqKrCFE-dSv8TjI&usqp=CAU"),
     Pregunta(
-        id: 0,
         pregunta: "¿El Tetra Neón es un pez cuya dieta es completamente carnivora o herbívora?",
         optionList: [
           "Carnívora",
@@ -37,7 +35,6 @@ class _TriviaScreenState extends State<TriviaScreen> {
         ],
         correctIndex: 1, imageUrl: "https://laguiadelacuario.es/wp-content/uploads/2020/05/acuariotetras_pda.jpg"),
     Pregunta(
-        id: 0,
         pregunta: "¿Cuál de los siguientes peces suele ser un poco agresivo y territorial a la hora de cuidar su habitat en los arrecifes?",
         optionList: [
           "Guppy",
@@ -80,15 +77,6 @@ class _TriviaScreenState extends State<TriviaScreen> {
                 text: questions[currentQuestionIndex].optionList[index],
                 onTap: () => _handleAnswer(index, context),
               )),
-
-              /*Expanded(
-                child: ElevatedButton(
-                  onPressed: () {
-                    handleAnswer(index);
-                  },
-                  child: Text(questions[currentQuestionIndex].optionList[index]),
-                ),
-              ),*/
             ),
           ],
         ),
@@ -98,16 +86,16 @@ class _TriviaScreenState extends State<TriviaScreen> {
 
   void _handleAnswer(int selectedOptionIndex, BuildContext context) {
     if (selectedOptionIndex == questions[currentQuestionIndex].correctIndex) {
-      // Lógica para manejar una respuesta correcta
+      // Respuesta correcta
       puntosObtenidos += 200;
     }
 
-    // Avanzar a la siguiente pregunta o hacer algo más según tus necesidades
+    // Avance pregunta, no importa si está mal
     setState(() {
       if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
       } else {
-        // Fin del cuestionario, puedes mostrar un mensaje o volver al inicio, etc.
+        // Fin trivia diálogo
         showDialog(context: context, builder: (BuildContext context){
           return AlertDialog(
             contentPadding: const EdgeInsets.all(16.0),

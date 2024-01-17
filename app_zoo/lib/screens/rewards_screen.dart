@@ -21,7 +21,6 @@ class _RewardsScreenState extends State<RewardsScreen> {
       appBar: AppBar(
         title: const Text('Recompensas'),
       ),
-      // Envuelve el Column en un SingleChildScrollView para habilitar el desplazamiento
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -47,7 +46,7 @@ class _RewardsScreenState extends State<RewardsScreen> {
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue, // Color de fondo del botón
+                    backgroundColor: Colors.blue, 
                   ),
                   onPressed: () => _validateReward(recompensa: recompensa, context: context),
                   child: Text(

@@ -3,9 +3,9 @@ import 'package:app_zoo/screens/main_app_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget {
-  // Crear las claves para los formularios y los campos de texto
+  // Crear las claves para los formularios, campos de texto y controllers
   final _formKey = GlobalKey<FormState>();
-  final _usernameController = TextEditingController();
+  final _mailController = TextEditingController();
   final _passwordController = TextEditingController();
 
   SignInScreen({super.key});
@@ -25,14 +25,17 @@ class SignInScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               TextFormField(
-                controller: _usernameController,
+                controller: _mailController,
                 decoration: const InputDecoration(
-                  labelText: 'Usuario',
+                  labelText: 'Correo',
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Por favor ingrese su usuario';
+                    return 'Por favor ingrese su correo electrónico';
+                  }
+                  if (!value.contains('@')) {
+                    return 'Por favor ingrese un correo electrónico válido';
                   }
                   return null;
                 },
@@ -59,10 +62,7 @@ class SignInScreen extends StatelessWidget {
                   // Valida el formulario y si es correcto, procede al inicio de sesión
                   if (_formKey.currentState!.validate()) {
                     // Aquí se manejaría el inicio de sesión
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Procesando datos')),
-                    );
-                    if(userProvider.selectUserFromCredentials(usuario: _usernameController.text, password: _passwordController.text)!=null){
+                    if(userProvider.selectUserFromCredentials(mail: _mailController.text, password: _passwordController.text)!=null){
                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainAppScreen()));
                     }else{
                       ScaffoldMessenger.of(context).showSnackBar(

@@ -19,11 +19,11 @@ class _UserProvider{
     return exist;
   }
 
-  User? selectUserFromCredentials({required String usuario, required String password}){
+  User? selectUserFromCredentials({required String mail, required String password}){
 
     if(_usuarios.isNotEmpty){
       for(User user in _usuarios){
-        if(user.mail==usuario && user.password == password){
+        if(user.mail==mail && user.password == password){
           return user;
         }
       }

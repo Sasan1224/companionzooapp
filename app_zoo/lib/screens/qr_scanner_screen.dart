@@ -5,9 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
 class QrScreen extends StatelessWidget {
-  String previousQR="";
 
-  QrScreen({Key? key}) : super(key: key);
+  const QrScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +19,13 @@ class QrScreen extends StatelessWidget {
               final List<Barcode> barcodes = capture.barcodes;
               for (final barcode in barcodes) {
                 debugPrint('Barcode found! ${barcode.rawValue}');
-                if(previousQR != barcode.rawValue.toString()){
+                
                   AnimalInfo? animal = animalInfoProvider.getAnimalWithQR(barcode.rawValue.toString());
                   if(animal!=null){
-                    previousQR = barcode.rawValue.toString();
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AnimalInfoScreen(animal: animal)));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => AnimalInfoScreen(animal: animal)));
                   }
-                }
+              
               }
-              previousQR = "";
             },
           ),
            Center(
@@ -49,7 +46,7 @@ class CornerPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2.0;
 
-    // Dibuja las esquinas blancas
+
     const double cornerSize = 20.0;
     const double cornerLineWidth = 4.0;
 
